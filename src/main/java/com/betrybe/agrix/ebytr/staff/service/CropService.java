@@ -30,12 +30,8 @@ public class CropService {
    * Returns a list of all crops.
    */
 
-  public List<Crop> getAllCrops() throws CropNotFoundException {
-    List<Crop> crops = cropRepository.findAll();
-    if (crops.isEmpty()) {
-      throw new CropNotFoundException("Plantação não encontrada!");
-    }
-    return crops;
+  public List<Crop> getAllCrops() {
+    return cropRepository.findAll();
   }
 
   public Crop getCropById(Long id) throws CropNotFoundException {
