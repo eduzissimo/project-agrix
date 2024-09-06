@@ -53,4 +53,12 @@ public class PersonService {
   public Person create(Person person) {
     return personRepository.save(person);
   }
+
+  /**
+   * Saves a person.
+   */
+  public Person savePerson(Person entity) {
+    return personRepository.save(entity);
+  }
+
 }
